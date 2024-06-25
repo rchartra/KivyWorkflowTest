@@ -50,8 +50,8 @@ jobs:
         python -m pip install --upgrade pip
         python -m pip install kivy pytest
     - name: Test App
-        run: |
-          python -m pytest
+      run: |
+        python -m pytest
 
   mac_test:
 
@@ -68,5 +68,5 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install kivy pytest
       - name: Test App
-          run: |
-            python -m pytest
+        run: |
+          python -m pytest
