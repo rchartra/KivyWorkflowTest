@@ -28,10 +28,10 @@ jobs:
         sudo apt-get install xorg openbox
     - name: Install dependencies
       run: |
-        python -m pip install kivy
-    - name: Run app
+        python -m pip install kivy pytest
+    - name: Test App
       run: |
-        python testapp.py
+        python -m pytest
         
   windows_test:
     runs-on: windows-latest
@@ -48,10 +48,10 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        python -m pip install kivy
-    - name: Run App
-      run: |
-        python testapp.py
+        python -m pip install kivy pytest
+    - name: Test App
+        run: |
+          python -m pytest
 
   mac_test:
 
@@ -66,7 +66,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          python -m pip install kivy
-      - name: Run App
-        run: |
-          python testapp.py
+          python -m pip install kivy pytest
+      - name: Test App
+          run: |
+            python -m pytest
